@@ -11,6 +11,7 @@ import cookieParser from "cookie-parser";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import os from "os";
+import { Prisma } from "@prisma/client";
 import { prisma } from "./db.js";
 import { config } from "./config.js";
 import {
@@ -1039,8 +1040,8 @@ app.get("/api/admin/users", requireAdmin, async (req, res) => {
   const where = q
     ? {
         OR: [
-          { username: { contains: q, mode: "insensitive" } },
-          { phone: { contains: q, mode: "insensitive" } }
+          { username: { contains: q, mode: Prisma.QueryMode.insensitive } },
+          { phone: { contains: q, mode: Prisma.QueryMode.insensitive } }
         ]
       }
     : {};
@@ -1052,7 +1053,7 @@ app.get("/api/admin/users", requireAdmin, async (req, res) => {
   return res.json({ success: true, data: users });
 });
 
-app.post("/api/admin/users", requireAdmin, async (req, res) => {
+app.post("/api/admin/users", requireAdmin, async (req: express.Request, res: express.Response) => {
   const parsed = adminUserCreateSchema.safeParse(req.body);
   if (!parsed.success) {
     const issue = parsed.error.issues[0];
@@ -1074,7 +1075,7 @@ app.post("/api/admin/users", requireAdmin, async (req, res) => {
   return res.json({ success: true, data: { id: user.id, username: user.username, phone: user.phone } });
 });
 
-app.patch("/api/admin/users/:id", requireAdmin, async (req, res) => {
+app.patch("/api/admin/users/:id", requireAdmin, async (req: express.Request, res: express.Response) => {
   const parsed = adminUserUpdateSchema.safeParse(req.body);
   if (!parsed.success) {
     const issue = parsed.error.issues[0];
@@ -1113,7 +1114,7 @@ app.patch("/api/admin/users/:id", requireAdmin, async (req, res) => {
   return res.json({ success: true, data: { id: updated.id, username: updated.username, phone: updated.phone } });
 });
 
-app.delete("/api/admin/users/:id", requireAdmin, async (req, res) => {
+app.delete("/api/admin/users/:id", requireAdmin, async (req: express.Request, res: express.Response) => {
   const [items, claims, reports] = await Promise.all([
     prisma.item.count({ where: { publisherId: req.params.id } }),
     prisma.claim.count({ where: { claimantId: req.params.id } }),
@@ -1133,7 +1134,7 @@ app.use((err: unknown, _req: express.Request, res: express.Response, _next: expr
 
 app.listen(config.port, () => {
   console.log(`API running on http://localhost:${config.port}`);
-  const nets = os.networkInterfaces();
+  const nets = os.networkInterfaces() as NodeJS.Dict<os.NetworkInterfaceInfo[]>;
   const ips: string[] = [];
   Object.values(nets).forEach((iface) => {
     iface?.forEach((addr) => {
