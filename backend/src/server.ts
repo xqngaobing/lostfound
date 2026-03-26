@@ -1,5 +1,5 @@
-﻿import dotenv from "dotenv";
-import express from "express";
+import dotenv from "dotenv";
+import express, { Express, Request, Response } from "express";
 import cors from "cors";
 import helmet from "helmet";
 import morgan from "morgan";
@@ -137,7 +137,7 @@ const createNotification = async (payload: {
         type: payload.type,
         title: payload.title,
         body: payload.body,
-        meta: payload.meta,
+        meta: payload.meta as any,
         itemId: payload.itemId ?? undefined,
         dedupeKey: payload.dedupeKey
       }
@@ -360,7 +360,7 @@ app.post("/api/notifications/:id/read", requireAuth, async (req, res) => {
 });
 
 app.post("/api/uploads", requireAuth, upload.array("images", config.maxImageCount), async (req, res) => {
-  const files = req.files as Express.Multer.File[] | undefined;
+  const files = req.files as any;
   if (!files || files.length === 0) {
     return res.status(400).json({ success: false, error: "请上传图片" });
   }

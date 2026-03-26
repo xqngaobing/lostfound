@@ -1,0 +1,5 @@
+{
+  "build_command": "npm ci --only=production && npm run prisma:generate && npm run prisma:migrate && npm run build",
+  "start_command": "npm start",
+  "port": 10000
+}
