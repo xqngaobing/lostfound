@@ -210,7 +210,7 @@ app.get("/api/health", (_req, res) => {
 });
 
 app.get("/api/system/lan-ips", (_req, res) => {
-  const nets = os.networkInterfaces();
+  const nets = os.networkInterfaces() as Record<string, os.NetworkInterfaceInfo[]>;
   const ips: string[] = [];
   Object.values(nets).forEach((iface) => {
     iface?.forEach((addr) => {
@@ -1134,7 +1134,7 @@ app.use((err: unknown, _req: express.Request, res: express.Response, _next: expr
 
 app.listen(config.port, () => {
   console.log(`API running on http://localhost:${config.port}`);
-  const nets = os.networkInterfaces() ?? {};
+  const nets = os.networkInterfaces() as Record<string, os.NetworkInterfaceInfo[]>;
   const ips: string[] = [];
   Object.values(nets).forEach((iface) => {
     iface?.forEach((addr: os.NetworkInterfaceInfo) => {
