@@ -1,0 +1,473 @@
+
+> zhenyuan-lostfound-backend@1.0.0 dev
+> tsx watch src/server.ts
+
+API running on http://localhost:4000
+[0mGET /api/auth/me [33m401[0m 2.105 ms - 40[0m
+[0mGET /api/auth/me [33m401[0m 0.348 ms - 40[0m
+[0mGET /api/items?page=1&pageSize=12&sort=latest [32m200[0m 263.723 ms - 824[0m
+[0mGET /api/items?page=1&pageSize=12&sort=latest [32m200[0m 256.555 ms - 824[0m
+[0mGET /api/auth/me [33m401[0m 0.318 ms - 40[0m
+[0mGET /api/auth/me [33m401[0m 0.282 ms - 40[0m
+[0mGET /api/auth/me [33m401[0m 0.249 ms - 40[0m
+[0mGET /api/auth/me [33m401[0m 0.152 ms - 40[0m
+[0mPOST /api/auth/register [32m200[0m 96.765 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 3.513 ms - 108[0m
+[0mGET /api/items?page=1&pageSize=12&sort=latest [32m200[0m 2.150 ms - 824[0m
+[0mGET /api/auth/me [32m200[0m 2.615 ms - 108[0m
+[0mGET /api/items?page=1&pageSize=12&sort=latest [32m200[0m 2.104 ms - 824[0m
+[0mGET /api/auth/me [32m200[0m 4.013 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 1.775 ms - 108[0m
+[0mGET /api/admin/claims [32m200[0m 7.053 ms - 332[0m
+[0mGET /api/admin/reports [32m200[0m 6.568 ms - 266[0m
+[0mGET /api/admin/items [32m200[0m 7.490 ms - 574[0m
+[0mPATCH /api/admin/items/54b0e37a-c82a-4f7b-bb08-e071bb5a5e8c/status [32m200[0m 10.246 ms - 666[0m
+[0mGET /api/admin/items [32m200[0m 1.602 ms - 574[0m
+[0mGET /api/admin/claims [36m304[0m 3.211 ms - -[0m
+[0mGET /api/admin/reports [36m304[0m 3.330 ms - -[0m
+[0mPATCH /api/admin/items/54b0e37a-c82a-4f7b-bb08-e071bb5a5e8c/status [32m200[0m 3.151 ms - 666[0m
+[0mGET /api/admin/claims [36m304[0m 1.700 ms - -[0m
+[0mGET /api/admin/items [36m304[0m 2.443 ms - -[0m
+[0mGET /api/admin/reports [36m304[0m 3.087 ms - -[0m
+[0mPATCH /api/admin/items/54b0e37a-c82a-4f7b-bb08-e071bb5a5e8c/status [32m200[0m 1.577 ms - 666[0m
+[0mGET /api/admin/items [36m304[0m 2.112 ms - -[0m
+[0mGET /api/admin/claims [36m304[0m 2.157 ms - -[0m
+[0mGET /api/admin/reports [36m304[0m 2.328 ms - -[0m
+[0mPATCH /api/admin/items/61c51cca-e929-4621-9931-9b72075e38ad/status [32m200[0m 2.691 ms - 645[0m
+[0mGET /api/admin/claims [36m304[0m 1.693 ms - -[0m
+[0mGET /api/admin/items [32m200[0m 2.639 ms - 577[0m
+[0mGET /api/admin/reports [36m304[0m 2.507 ms - -[0m
+[0mPATCH /api/admin/items/940bc5b1-a152-4b17-84c3-e366614f7e30/status [32m200[0m 1.836 ms - 665[0m
+[0mGET /api/admin/items [32m200[0m 1.788 ms - 580[0m
+[0mGET /api/admin/claims [36m304[0m 2.273 ms - -[0m
+[0mGET /api/admin/reports [32m200[0m 2.165 ms - 269[0m
+[0mGET /api/auth/me [32m200[0m 3.060 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 1.934 ms - 108[0m
+[0mGET /api/items?page=1&pageSize=12&sort=latest [32m200[0m 2.767 ms - 99[0m
+[0mGET /api/items?page=1&pageSize=12&sort=latest [32m200[0m 1.440 ms - 99[0m
+[0mGET /api/auth/me [32m200[0m 1.602 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 2.325 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 1.854 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 1.454 ms - 108[0m
+[0mPOST /api/uploads [32m200[0m 189.236 ms - 354[0m
+[0mPOST /api/items [32m200[0m 95.954 ms - 128[0m
+[0mGET /api/auth/me [32m200[0m 1.696 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 1.302 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 2.314 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 1.923 ms - 108[0m
+[0mGET /api/items/84019 [32m200[0m 4.788 ms - 698[0m
+[0mGET /api/items/84019 [32m200[0m 7.931 ms - 698[0m
+[0mGET /uploads/1774430291574-184edc698ab04.webp [32m200[0m 4.352 ms - 18990[0m
+[0mGET /uploads/1774430291625-daf288814e8b18.webp [32m200[0m 4.246 ms - 19028[0m
+[0mGET /uploads/1774430291660-518ad9266dd948.webp [32m200[0m 4.469 ms - 19524[0m
+[0mGET /uploads/1774430291691-6208a5d2e163b8.webp [32m200[0m 4.701 ms - 20076[0m
+[0mGET /uploads/1774430291723-e26067a3c40518.webp [32m200[0m 4.689 ms - 19382[0m
+[0mPOST /api/auth/logout [32m200[0m 0.355 ms - 16[0m
+[0mGET /api/auth/me [33m401[0m 0.231 ms - 40[0m
+[0mGET /api/auth/me [33m401[0m 0.128 ms - 40[0m
+[0mGET /api/items?page=1&pageSize=12&sort=latest [32m200[0m 2.355 ms - 699[0m
+[0mGET /api/items?page=1&pageSize=12&sort=latest [32m200[0m 1.308 ms - 699[0m
+[0mGET /uploads/1774430291574-184edc698ab04.webp [36m304[0m 0.595 ms - -[0m
+[0mGET /api/auth/me [33m401[0m 0.434 ms - 40[0m
+[0mGET /api/auth/me [33m401[0m 0.265 ms - 40[0m
+[0mGET /api/auth/me [33m401[0m 0.207 ms - 40[0m
+[0mGET /api/auth/me [33m401[0m 0.085 ms - 40[0m
+[0mPOST /api/auth/login [32m200[0m 69.822 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 2.314 ms - 108[0m
+[0mGET /api/items?page=1&pageSize=12&sort=latest [32m200[0m 1.861 ms - 699[0m
+[0mGET /api/auth/me [32m200[0m 1.367 ms - 108[0m
+[0mGET /api/items?page=1&pageSize=12&sort=latest [32m200[0m 1.633 ms - 699[0m
+[0mGET /uploads/1774430291574-184edc698ab04.webp [36m304[0m 0.346 ms - -[0m
+[0mGET /api/auth/me [32m200[0m 3.120 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 2.133 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 1.494 ms - 108[0m
+[0mGET /api/items/84019 [32m200[0m 3.882 ms - 698[0m
+[0mGET /api/auth/me [32m200[0m 1.947 ms - 108[0m
+[0mGET /api/items/84019 [32m200[0m 3.119 ms - 698[0m
+[0mGET /uploads/1774430291574-184edc698ab04.webp [36m304[0m 0.422 ms - -[0m
+[0mGET /uploads/1774430291625-daf288814e8b18.webp [36m304[0m 1.273 ms - -[0m
+[0mGET /uploads/1774430291660-518ad9266dd948.webp [36m304[0m 1.377 ms - -[0m
+[0mGET /uploads/1774430291691-6208a5d2e163b8.webp [36m304[0m 1.380 ms - -[0m
+[0mGET /uploads/1774430291723-e26067a3c40518.webp [36m304[0m 1.342 ms - -[0m
+[0mGET /api/auth/me [32m200[0m 2.437 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 1.471 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 2.395 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 1.746 ms - 108[0m
+[0mGET /api/admin/items [32m200[0m 2.463 ms - 766[0m
+[0mGET /api/admin/reports [36m304[0m 2.309 ms - -[0m
+[0mGET /api/admin/claims [36m304[0m 3.451 ms - -[0m
+[0mGET /api/auth/me [32m200[0m 2.495 ms - 108[0m
+[0mGET /api/items?page=1&pageSize=12&sort=latest [32m200[0m 2.550 ms - 699[0m
+[0mGET /api/auth/me [32m200[0m 2.550 ms - 108[0m
+[0mGET /api/items?page=1&pageSize=12&sort=latest [32m200[0m 2.024 ms - 699[0m
+[0mGET /uploads/1774430291574-184edc698ab04.webp [36m304[0m 0.944 ms - -[0m
+[0mGET /api/auth/me [32m200[0m 3.418 ms - 108[0m
+[0mGET /api/items?page=1&pageSize=12&sort=latest [32m200[0m 2.219 ms - 699[0m
+[0mGET /api/auth/me [32m200[0m 2.570 ms - 108[0m
+[0mGET /api/items?page=1&pageSize=12&sort=latest [32m200[0m 2.374 ms - 699[0m
+[0mGET /uploads/1774430291574-184edc698ab04.webp [36m304[0m 0.579 ms - -[0m
+[0mGET /api/auth/me [32m200[0m 2.320 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 1.993 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 1.884 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 2.011 ms - 108[0m
+17:21:12 [tsx] change in ./src\validators.ts Restarting...
+cnode:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::4000
+    at Server.setupListenHandle [as _listen2] (node:net:1948:16)
+    at listenInCluster (node:net:2005:12)
+    at Server.listen (node:net:2110:7)
+    at app.listen (D:\桌面\失物招领\zhenyuan-lostfound\backend\node_modules\express\lib\application.js:635:24)
+    at <anonymous> (D:\桌面\失物招领\zhenyuan-lostfound\backend\src\server.ts:555:5)
+    at ModuleJob.run (node:internal/modules/esm/module_job:430:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:661:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1984:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 4000
+}
+
+Node.js v24.14.0
+17:21:43 [tsx] change in ./src\server.ts Rerunning...
+cnode:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::4000
+    at Server.setupListenHandle [as _listen2] (node:net:1948:16)
+    at listenInCluster (node:net:2005:12)
+    at Server.listen (node:net:2110:7)
+    at app.listen (D:\桌面\失物招领\zhenyuan-lostfound\backend\node_modules\express\lib\application.js:635:24)
+    at <anonymous> (D:\桌面\失物招领\zhenyuan-lostfound\backend\src\server.ts:654:5)
+    at ModuleJob.run (node:internal/modules/esm/module_job:430:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:661:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1984:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 4000
+}
+
+Node.js v24.14.0
+17:29:16 [tsx] change in ./src\server.ts Rerunning...
+cnode:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::4000
+    at Server.setupListenHandle [as _listen2] (node:net:1948:16)
+    at listenInCluster (node:net:2005:12)
+    at Server.listen (node:net:2110:7)
+    at app.listen (D:\桌面\失物招领\zhenyuan-lostfound\backend\node_modules\express\lib\application.js:635:24)
+    at <anonymous> (D:\桌面\失物招领\zhenyuan-lostfound\backend\src\server.ts:668:5)
+    at ModuleJob.run (node:internal/modules/esm/module_job:430:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:661:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1984:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 4000
+}
+
+Node.js v24.14.0
+17:33:15 [tsx] change in ./src\server.ts Rerunning...
+cAPI running on http://localhost:4000
+[0mGET /uploads/1774430757079-424e6771658928.webp [32m200[0m 3.741 ms - 36936[0m
+[0mGET /uploads/1774430729777-32534d94d084d.webp [32m200[0m 4.402 ms - 46124[0m
+[0mGET /uploads/1774430701911-fa933771910c18.webp [32m200[0m 4.373 ms - 51408[0m
+[0mGET /uploads/1774430757079-424e6771658928.webp [32m200[0m 0.721 ms - 36936[0m
+[0mGET /uploads/1774430729777-32534d94d084d.webp [32m200[0m 0.865 ms - 46124[0m
+[0mGET /uploads/1774430701911-fa933771910c18.webp [32m200[0m 0.244 ms - 51408[0m
+[0mGET /api/auth/me [33m401[0m 2.236 ms - 40[0m
+[0mGET /api/auth/me [33m401[0m 0.225 ms - 40[0m
+[0mGET /api/system/lan-ips [32m200[0m 4.346 ms - 63[0m
+[0mGET /api/auth/me [33m401[0m 0.076 ms - 40[0m
+[0mGET /api/auth/me [33m401[0m 0.056 ms - 40[0m
+[0mGET /api/system/lan-ips [32m200[0m 2.837 ms - 63[0m
+[0mGET /api/items/94785 [32m200[0m 10.564 ms - 715[0m
+[0mGET /api/items/94785 [32m200[0m 61.010 ms - 715[0m
+[0mGET /api/auth/me [33m401[0m 0.291 ms - 40[0m
+[0mGET /api/system/lan-ips [32m200[0m 3.708 ms - 63[0m
+[0mGET /api/auth/me [33m401[0m 0.055 ms - 40[0m
+[0mGET /api/items?page=1&pageSize=12&sort=latest [32m200[0m 6.686 ms - 2485[0m
+[0mGET /api/system/lan-ips [32m200[0m 2.341 ms - 63[0m
+[0mGET /api/items?page=1&pageSize=12&sort=latest [32m200[0m 3.278 ms - 2485[0m
+[0mGET /uploads/1774430757079-424e6771658928.webp [36m304[0m 0.647 ms - -[0m
+[0mGET /uploads/1774430729777-32534d94d084d.webp [36m304[0m 0.836 ms - -[0m
+[0mGET /uploads/1774430701911-fa933771910c18.webp [36m304[0m 0.237 ms - -[0m
+[0mGET /api/auth/me [33m401[0m 0.298 ms - 40[0m
+[0mGET /api/auth/me [33m401[0m 0.167 ms - 40[0m
+[0mGET /api/items/10002 [32m200[0m 3.812 ms - 458[0m
+[0mGET /api/system/lan-ips [32m200[0m 4.264 ms - 63[0m
+[0mGET /api/auth/me [33m401[0m 0.059 ms - 40[0m
+[0mGET /api/auth/me [33m401[0m 0.055 ms - 40[0m
+[0mGET /api/items/10002 [32m200[0m 1.352 ms - 458[0m
+[0mGET /api/system/lan-ips [32m200[0m 3.455 ms - 63[0m
+[0mGET /api/auth/me [33m401[0m 0.149 ms - 40[0m
+[0mGET /api/auth/me [33m401[0m 0.095 ms - 40[0m
+[0mGET /api/auth/me [33m401[0m 0.113 ms - 40[0m
+[0mGET /api/items/10002 [32m200[0m 2.256 ms - 458[0m
+[0mGET /api/auth/me [33m401[0m 0.083 ms - 40[0m
+[0mGET /api/auth/me [33m401[0m 0.053 ms - 40[0m
+[0mGET /api/auth/me [33m401[0m 0.053 ms - 40[0m
+[0mGET /api/items/10002 [32m200[0m 1.575 ms - 458[0m
+[0mGET /api/auth/me [33m401[0m 0.255 ms - 40[0m
+[0mGET /api/auth/me [33m401[0m 0.134 ms - 40[0m
+[0mGET /api/items?page=1&pageSize=12&sort=latest [32m200[0m 3.158 ms - 2485[0m
+[0mGET /api/items?page=1&pageSize=12&sort=latest [32m200[0m 44.189 ms - 2485[0m
+[0mGET /uploads/1774430757079-424e6771658928.webp [36m304[0m 0.709 ms - -[0m
+[0mGET /uploads/1774430701911-fa933771910c18.webp [36m304[0m 0.647 ms - -[0m
+[0mGET /uploads/1774430729777-32534d94d084d.webp [36m304[0m 0.182 ms - -[0m
+[0mGET /api/items?page=1&pageSize=12&sort=latest&category=%E9%92%B1%E5%8C%85%2F%E5%8C%85 [32m200[0m 7.384 ms - 99[0m
+17:35:21 [tsx] change in ./src\server.ts Restarting...
+cnode:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::4000
+    at Server.setupListenHandle [as _listen2] (node:net:1948:16)
+    at listenInCluster (node:net:2005:12)
+    at Server.listen (node:net:2110:7)
+    at app.listen (D:\桌面\失物招领\zhenyuan-lostfound\backend\node_modules\express\lib\application.js:635:24)
+    at <anonymous> (D:\桌面\失物招领\zhenyuan-lostfound\backend\src\server.ts:669:5)
+    at ModuleJob.run (node:internal/modules/esm/module_job:430:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:661:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1984:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 4000
+}
+
+Node.js v24.14.0
+08:06:23 [tsx] change in ./src\validators.ts Rerunning...
+cnode:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::4000
+    at Server.setupListenHandle [as _listen2] (node:net:1948:16)
+    at listenInCluster (node:net:2005:12)
+    at Server.listen (node:net:2110:7)
+    at app.listen (D:\桌面\失物招领\zhenyuan-lostfound\backend\node_modules\express\lib\application.js:635:24)
+    at <anonymous> (D:\桌面\失物招领\zhenyuan-lostfound\backend\src\server.ts:669:5)
+    at ModuleJob.run (node:internal/modules/esm/module_job:430:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:661:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1984:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 4000
+}
+
+Node.js v24.14.0
+08:08:49 [tsx] change in ./src\server.ts Rerunning...
+cnode:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::4000
+    at Server.setupListenHandle [as _listen2] (node:net:1948:16)
+    at listenInCluster (node:net:2005:12)
+    at Server.listen (node:net:2110:7)
+    at app.listen (D:\桌面\失物招领\zhenyuan-lostfound\backend\node_modules\express\lib\application.js:635:24)
+    at <anonymous> (D:\桌面\失物招领\zhenyuan-lostfound\backend\src\server.ts:694:5)
+    at ModuleJob.run (node:internal/modules/esm/module_job:430:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:661:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1984:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 4000
+}
+
+Node.js v24.14.0
+08:40:51 [tsx] change in ./src\server.ts Rerunning...
+cnode:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::4000
+    at Server.setupListenHandle [as _listen2] (node:net:1948:16)
+    at listenInCluster (node:net:2005:12)
+    at Server.listen (node:net:2110:7)
+    at app.listen (D:\桌面\失物招领\zhenyuan-lostfound\backend\node_modules\express\lib\application.js:635:24)
+    at <anonymous> (D:\桌面\失物招领\zhenyuan-lostfound\backend\src\server.ts:694:5)
+    at ModuleJob.run (node:internal/modules/esm/module_job:430:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:661:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1984:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 4000
+}
+
+Node.js v24.14.0
+09:22:35 [tsx] change in ./src\validators.ts Rerunning...
+cnode:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::4000
+    at Server.setupListenHandle [as _listen2] (node:net:1948:16)
+    at listenInCluster (node:net:2005:12)
+    at Server.listen (node:net:2110:7)
+    at app.listen (D:\桌面\失物招领\zhenyuan-lostfound\backend\node_modules\express\lib\application.js:635:24)
+    at <anonymous> (D:\桌面\失物招领\zhenyuan-lostfound\backend\src\server.ts:694:5)
+    at ModuleJob.run (node:internal/modules/esm/module_job:430:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:661:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1984:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 4000
+}
+
+Node.js v24.14.0
+09:40:25 [tsx] change in ./src\server.ts Rerunning...
+cAPI running on http://localhost:4000
+局域网访问地址:
+http://172.18.0.1:3000
+http://192.168.23.222:3000
+[0mGET /api/auth/me [32m200[0m 27.423 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 77.692 ms - 108[0m
+[0mGET /api/admin/items [36m304[0m 4.490 ms - -[0m
+[0mGET /api/admin/claims [36m304[0m 4.835 ms - -[0m
+[0mGET /api/admin/users [32m200[0m 36.489 ms - 663[0m
+[0mGET /api/admin/reports [36m304[0m 38.366 ms - -[0m
+09:43:07 [tsx] change in ./src\config.ts Restarting...
+cAPI running on http://localhost:4000
+局域网访问地址:
+http://172.18.0.1:3000
+http://192.168.23.222:3000
+09:43:35 [tsx] change in ./src\server.ts Restarting...
+cnode:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::4000
+    at Server.setupListenHandle [as _listen2] (node:net:1948:16)
+    at listenInCluster (node:net:2005:12)
+    at Server.listen (node:net:2110:7)
+    at app.listen (D:\桌面\失物招领\zhenyuan-lostfound\backend\node_modules\express\lib\application.js:635:24)
+    at <anonymous> (D:\桌面\失物招领\zhenyuan-lostfound\backend\src\server.ts:704:5)
+    at ModuleJob.run (node:internal/modules/esm/module_job:430:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:661:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1984:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 4000
+}
+
+Node.js v24.14.0
+09:51:42 [tsx] change in ./src\server.ts Rerunning...
+cAPI running on http://localhost:4000
+局域网访问地址:
+http://172.18.0.1:3000
+http://192.168.23.222:3000
+[0mGET /api/auth/me [32m200[0m 104.022 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 124.775 ms - 108[0m
+[0mGET /api/items?page=1&pageSize=12&sort=latest [32m200[0m 118.007 ms - 2194[0m
+[0mGET /api/items?page=1&pageSize=12&sort=latest [32m200[0m 113.248 ms - 2194[0m
+[0mGET /uploads/1774489648046-d1582f15bb365.webp [36m304[0m 2.816 ms - -[0m
+[0mGET /uploads/1774488435042-5335a535b3e668.webp [36m304[0m 2.329 ms - -[0m
+[0mGET /uploads/1774488262102-b0501867c343b.webp [36m304[0m 2.167 ms - -[0m
+[0mGET /api/auth/me [32m200[0m 4.774 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 4.309 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 3.716 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 6.045 ms - 108[0m
+[0mGET /api/my/items [32m200[0m 4.224 ms - 1164[0m
+[0mGET /api/my/claims [32m200[0m 4.325 ms - 26[0m
+[0mGET /api/my/items [32m200[0m 2.201 ms - 1164[0m
+[0mGET /api/my/claims [32m200[0m 1.809 ms - 26[0m
+[0mGET /uploads/1774489648046-d1582f15bb365.webp [36m304[0m 0.900 ms - -[0m
+[0mGET /uploads/1774488435042-5335a535b3e668.webp [36m304[0m 0.745 ms - -[0m
+[0mGET /uploads/1774488262102-b0501867c343b.webp [36m304[0m 0.775 ms - -[0m
+[0mGET /api/auth/me [32m200[0m 1.551 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 1.739 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 3.139 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 3.013 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 2.868 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 2.663 ms - 108[0m
+[0mGET /api/my/items [32m200[0m 3.809 ms - 1164[0m
+[0mGET /api/my/claims [32m200[0m 3.689 ms - 26[0m
+[0mGET /uploads/1774489648046-d1582f15bb365.webp [36m304[0m 0.861 ms - -[0m
+[0mGET /uploads/1774488435042-5335a535b3e668.webp [36m304[0m 0.876 ms - -[0m
+[0mGET /uploads/1774488262102-b0501867c343b.webp [36m304[0m 0.900 ms - -[0m
+[0mGET /api/my/items [32m200[0m 2.396 ms - 1164[0m
+[0mGET /api/my/claims [32m200[0m 2.050 ms - 26[0m
+[0mGET /api/auth/me [32m200[0m 2.807 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 1.759 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 1.743 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 1.620 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 3.062 ms - 108[0m
+[0mGET /api/items?page=1&pageSize=12&sort=latest [32m200[0m 2.627 ms - 2194[0m
+[0mGET /api/items?page=1&pageSize=12&sort=latest [32m200[0m 2.072 ms - 2194[0m
+[0mGET /api/auth/me [32m200[0m 3.393 ms - 108[0m
+[0mGET /uploads/1774489648046-d1582f15bb365.webp [36m304[0m 1.478 ms - -[0m
+[0mGET /uploads/1774488435042-5335a535b3e668.webp [36m304[0m 1.316 ms - -[0m
+[0mGET /uploads/1774488262102-b0501867c343b.webp [36m304[0m 1.350 ms - -[0m
+[0mGET /api/auth/me [32m200[0m 3.979 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 3.232 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 2.677 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 2.409 ms - 108[0m
+[0mPOST /api/uploads [32m200[0m 2584.334 ms - 378[0m
+[0mPOST /api/items [32m200[0m 11.899 ms - 123[0m
+[0mGET /api/auth/me [32m200[0m 0.947 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 2.142 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 0.920 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 1.083 ms - 108[0m
+[0mGET /api/items/00014 [32m200[0m 3.299 ms - 647[0m
+[0mGET /api/items/00014 [32m200[0m 3.964 ms - 647[0m
+[0mGET /uploads/1774489975025-c7f7ef2b8cfd08.webp [32m200[0m 3.554 ms - 67256[0m
+[0mGET /uploads/1774489976086-264b8aa5286cb.webp [32m200[0m 4.165 ms - 190796[0m
+[0mGET /uploads/1774489975485-e914dce593e41.webp [32m200[0m 4.231 ms - 137190[0m
+[0mGET /uploads/1774489975189-5c2a8c3ccdcd78.webp [32m200[0m 3.847 ms - 203342[0m
+[0mGET /uploads/1774489975758-9dcb5a51eaa058.webp [32m200[0m 4.853 ms - 223174[0m
+[0mGET /api/auth/me [32m200[0m 2.881 ms - 108[0m
+[0mGET /api/items?page=1&pageSize=12&sort=latest [32m200[0m 3.134 ms - 2795[0m
+[0mGET /api/auth/me [32m200[0m 0.875 ms - 108[0m
+[0mGET /api/items?page=1&pageSize=12&sort=latest [32m200[0m 1.083 ms - 2795[0m
+[0mGET /uploads/1774489975025-c7f7ef2b8cfd08.webp [36m304[0m 0.223 ms - -[0m
+[0mGET /uploads/1774488435042-5335a535b3e668.webp [36m304[0m 0.261 ms - -[0m
+[0mGET /uploads/1774488262102-b0501867c343b.webp [36m304[0m 0.280 ms - -[0m

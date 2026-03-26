@@ -1,0 +1,123 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum ItemStatus {
+  OPEN
+  CLAIMING
+  CLAIMED
+  REMOVED
+}
+
+enum ClaimStatus {
+  PENDING
+  APPROVED
+  REJECTED
+  WITHDRAWN
+}
+
+enum ReportType {
+  FAKE
+  INAPPROPRIATE
+  AD
+  OTHER
+}
+
+enum NotificationType {
+  CLAIM_CREATED
+  CLAIM_STATUS
+  ITEM_STATUS
+  ITEM_CREATED
+  ITEM_EXPIRE
+  ITEM_REPORTED
+}
+
+model User {
+  id           String   @id @default(uuid())
+  username     String
+  phone        String   @unique
+  passwordHash String
+  createdAt    DateTime @default(now())
+  items        Item[]
+  claims       Claim[]
+  reports      Report[]
+  notifications Notification[]
+}
+
+model Item {
+  id               String      @id @default(uuid())
+  seq              Int         @unique @default(autoincrement())
+  publisherId      String?
+  title            String
+  category         String
+  description      String
+  images           String[]
+  foundAt          DateTime
+  locationText     String
+  status           ItemStatus  @default(OPEN)
+  publisherContact String
+  publisherHint    String
+  manageTokenHash  String?
+  createdAt        DateTime    @default(now())
+  viewCount        Int         @default(0)
+  claims           Claim[]
+  reports          Report[]
+  notifications    Notification[]
+  publisher        User?       @relation(fields: [publisherId], references: [id])
+
+  @@index([status])
+  @@index([createdAt])
+}
+
+model Claim {
+  id               String      @id @default(uuid())
+  itemId           String
+  claimantId       String?
+  claimantName     String
+  claimantContact  String
+  verificationInfo String
+  status           ClaimStatus @default(PENDING)
+  createdAt        DateTime    @default(now())
+  item             Item        @relation(fields: [itemId], references: [id])
+  claimant         User?       @relation(fields: [claimantId], references: [id])
+
+  @@index([itemId])
+  @@index([createdAt])
+}
+
+model Report {
+  id         String     @id @default(uuid())
+  itemId     String
+  reporterId String?
+  type       ReportType
+  note       String?
+  createdAt  DateTime   @default(now())
+  item       Item       @relation(fields: [itemId], references: [id])
+  reporter   User?      @relation(fields: [reporterId], references: [id])
+
+  @@index([itemId])
+  @@index([createdAt])
+}
+
+model Notification {
+  id        String           @id @default(uuid())
+  userId    String
+  type      NotificationType
+  title     String
+  body      String
+  meta      Json?
+  itemId    String?
+  readAt    DateTime?
+  createdAt DateTime         @default(now())
+  dedupeKey String?          @unique
+  user      User             @relation(fields: [userId], references: [id])
+  item      Item?            @relation(fields: [itemId], references: [id])
+
+  @@index([userId, createdAt])
+  @@index([readAt])
+}

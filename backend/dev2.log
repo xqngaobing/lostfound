@@ -1,0 +1,419 @@
+
+> zhenyuan-lostfound-backend@1.0.0 dev
+> tsx watch src/server.ts
+
+D:\桌面\失物招领\zhenyuan-lostfound\backend\src\config.ts:8
+    throw new Error(`Missing env: ${name}`);
+          ^
+
+Error: Missing env: JWT_SECRET
+    at required (D:\桌面\失物招领\zhenyuan-lostfound\backend\src\config.ts:8:11)
+    at <anonymous> (D:\桌面\失物招领\zhenyuan-lostfound\backend\src\config.ts:18:14)
+    at ModuleJob.run (node:internal/modules/esm/module_job:430:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:661:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+
+Node.js v24.14.0
+17:21:12 [tsx] change in ./src\validators.ts Rerunning...
+cAPI running on http://localhost:4000
+[0mGET /api/auth/me [32m200[0m 56.663 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 1.635 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 1.009 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 1.057 ms - 108[0m
+[0mGET /api/my/items [32m200[0m 4.680 ms - 212[0m
+[0mGET /api/my/items [32m200[0m 2.155 ms - 212[0m
+[0mGET /api/my/claims [32m200[0m 3.335 ms - 26[0m
+[0mGET /api/my/claims [32m200[0m 43.365 ms - 26[0m
+[0mGET /api/auth/me [32m200[0m 1.060 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 3.259 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 3.444 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 2.958 ms - 108[0m
+[0mGET /api/items?page=1&pageSize=12&sort=latest [32m200[0m 6.489 ms - 699[0m
+[0mGET /uploads/1774430291574-184edc698ab04.webp [36m304[0m 2.061 ms - -[0m
+[0mGET /api/items?page=1&pageSize=12&sort=latest [32m200[0m 38.772 ms - 699[0m
+[0mGET /api/auth/me [32m200[0m 4.224 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 5.961 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 3.661 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 3.432 ms - 108[0m
+[0mGET /api/items/84019 [32m200[0m 9.172 ms - 698[0m
+[0mGET /api/items/84019 [32m200[0m 6.833 ms - 698[0m
+[0mGET /uploads/1774430291574-184edc698ab04.webp [36m304[0m 0.455 ms - -[0m
+[0mGET /uploads/1774430291625-daf288814e8b18.webp [36m304[0m 0.819 ms - -[0m
+[0mGET /uploads/1774430291660-518ad9266dd948.webp [36m304[0m 0.844 ms - -[0m
+[0mGET /uploads/1774430291691-6208a5d2e163b8.webp [36m304[0m 0.870 ms - -[0m
+[0mGET /uploads/1774430291723-e26067a3c40518.webp [36m304[0m 0.917 ms - -[0m
+[0mPOST /api/reports [32m200[0m 9.529 ms - 234[0m
+17:21:43 [tsx] change in ./src\server.ts Restarting...
+cnode:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::4000
+    at Server.setupListenHandle [as _listen2] (node:net:1948:16)
+    at listenInCluster (node:net:2005:12)
+    at Server.listen (node:net:2110:7)
+    at app.listen (D:\桌面\失物招领\zhenyuan-lostfound\backend\node_modules\express\lib\application.js:635:24)
+    at <anonymous> (D:\桌面\失物招领\zhenyuan-lostfound\backend\src\server.ts:654:5)
+    at ModuleJob.run (node:internal/modules/esm/module_job:430:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:661:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1984:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 4000
+}
+
+Node.js v24.14.0
+17:29:16 [tsx] change in ./src\server.ts Rerunning...
+cnode:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::4000
+    at Server.setupListenHandle [as _listen2] (node:net:1948:16)
+    at listenInCluster (node:net:2005:12)
+    at Server.listen (node:net:2110:7)
+    at app.listen (D:\桌面\失物招领\zhenyuan-lostfound\backend\node_modules\express\lib\application.js:635:24)
+    at <anonymous> (D:\桌面\失物招领\zhenyuan-lostfound\backend\src\server.ts:668:5)
+    at ModuleJob.run (node:internal/modules/esm/module_job:430:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:661:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1984:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 4000
+}
+
+Node.js v24.14.0
+17:33:15 [tsx] change in ./src\server.ts Rerunning...
+cnode:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::4000
+    at Server.setupListenHandle [as _listen2] (node:net:1948:16)
+    at listenInCluster (node:net:2005:12)
+    at Server.listen (node:net:2110:7)
+    at app.listen (D:\桌面\失物招领\zhenyuan-lostfound\backend\node_modules\express\lib\application.js:635:24)
+    at <anonymous> (D:\桌面\失物招领\zhenyuan-lostfound\backend\src\server.ts:669:5)
+    at ModuleJob.run (node:internal/modules/esm/module_job:430:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:661:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1984:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 4000
+}
+
+Node.js v24.14.0
+17:35:21 [tsx] change in ./src\server.ts Rerunning...
+cnode:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::4000
+    at Server.setupListenHandle [as _listen2] (node:net:1948:16)
+    at listenInCluster (node:net:2005:12)
+    at Server.listen (node:net:2110:7)
+    at app.listen (D:\桌面\失物招领\zhenyuan-lostfound\backend\node_modules\express\lib\application.js:635:24)
+    at <anonymous> (D:\桌面\失物招领\zhenyuan-lostfound\backend\src\server.ts:669:5)
+    at ModuleJob.run (node:internal/modules/esm/module_job:430:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:661:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1984:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 4000
+}
+
+Node.js v24.14.0
+08:06:23 [tsx] change in ./src\validators.ts Rerunning...
+cAPI running on http://localhost:4000
+局域网访问地址:
+http://172.18.0.1:3000
+http://192.168.23.222:3000
+08:08:49 [tsx] change in ./src\server.ts Restarting...
+cnode:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::4000
+    at Server.setupListenHandle [as _listen2] (node:net:1948:16)
+    at listenInCluster (node:net:2005:12)
+    at Server.listen (node:net:2110:7)
+    at app.listen (D:\桌面\失物招领\zhenyuan-lostfound\backend\node_modules\express\lib\application.js:635:24)
+    at <anonymous> (D:\桌面\失物招领\zhenyuan-lostfound\backend\src\server.ts:694:5)
+    at ModuleJob.run (node:internal/modules/esm/module_job:430:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:661:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1984:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 4000
+}
+
+Node.js v24.14.0
+08:40:51 [tsx] change in ./src\server.ts Rerunning...
+cAPI running on http://localhost:4000
+局域网访问地址:
+http://172.18.0.1:3000
+http://192.168.23.222:3000
+[0mGET /api/admin/claims [32m200[0m 46.497 ms - 332[0m
+[0mGET /api/admin/reports [32m200[0m 77.300 ms - 266[0m
+[0mGET /api/admin/users [32m200[0m 77.324 ms - 285[0m
+[0mGET /api/admin/items [32m200[0m 87.068 ms - 559[0m
+[0mGET /api/auth/me [33m401[0m 0.569 ms - 40[0m
+[0mGET /api/auth/me [33m401[0m 0.150 ms - 40[0m
+[0mGET /api/auth/me [33m401[0m 0.129 ms - 40[0m
+[0mGET /api/auth/me [33m401[0m 0.081 ms - 40[0m
+[0mGET /api/admin/items [36m304[0m 1.926 ms - -[0m
+[0mGET /api/admin/reports [36m304[0m 1.496 ms - -[0m
+[0mGET /api/admin/users [36m304[0m 1.365 ms - -[0m
+[0mGET /api/admin/claims [36m304[0m 4.574 ms - -[0m
+[0mGET /api/auth/me [33m401[0m 0.242 ms - 40[0m
+[0mGET /api/auth/me [33m401[0m 0.128 ms - 40[0m
+[0mGET /api/items?page=1&pageSize=12&sort=latest [32m200[0m 3.993 ms - 830[0m
+[0mGET /api/items?page=1&pageSize=12&sort=latest [32m200[0m 2.055 ms - 830[0m
+[0mGET /api/auth/me [33m401[0m 0.135 ms - 40[0m
+[0mGET /api/auth/me [33m401[0m 0.087 ms - 40[0m
+[0mGET /api/auth/me [33m401[0m 0.064 ms - 40[0m
+[0mGET /api/auth/me [33m401[0m 0.058 ms - 40[0m
+[0mGET /api/auth/me [33m401[0m 0.195 ms - 40[0m
+[0mGET /api/auth/me [33m401[0m 0.140 ms - 40[0m
+[0mGET /api/auth/me [33m401[0m 0.181 ms - 40[0m
+[0mGET /api/auth/me [33m401[0m 0.108 ms - 40[0m
+[0mGET /api/items?page=1&pageSize=12&sort=latest [32m200[0m 2.407 ms - 830[0m
+[0mGET /api/items?page=1&pageSize=12&sort=latest [32m200[0m 1.827 ms - 830[0m
+[0mGET /api/auth/me [33m401[0m 0.152 ms - 40[0m
+[0mGET /api/auth/me [33m401[0m 0.067 ms - 40[0m
+[0mGET /api/admin/claims [36m304[0m 2.320 ms - -[0m
+[0mGET /api/admin/items [36m304[0m 3.102 ms - -[0m
+[0mGET /api/admin/users [36m304[0m 1.752 ms - -[0m
+[0mGET /api/admin/reports [36m304[0m 3.818 ms - -[0m
+[0mGET /api/auth/me [33m401[0m 0.157 ms - 40[0m
+[0mGET /api/auth/me [33m401[0m 0.136 ms - 40[0m
+[0mGET /api/auth/me [33m401[0m 0.178 ms - 40[0m
+[0mGET /api/auth/me [33m401[0m 0.076 ms - 40[0m
+[0mGET /api/auth/me [33m401[0m 0.126 ms - 40[0m
+[0mGET /api/auth/me [33m401[0m 0.072 ms - 40[0m
+[0mGET /api/auth/me [33m401[0m 0.325 ms - 40[0m
+[0mGET /api/auth/me [33m401[0m 0.139 ms - 40[0m
+[0mPOST /api/auth/register [32m200[0m 163.100 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 3.971 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 2.498 ms - 108[0m
+[0mGET /api/items?page=1&pageSize=12&sort=latest [32m200[0m 60.013 ms - 830[0m
+[0mGET /api/items?page=1&pageSize=12&sort=latest [32m200[0m 63.300 ms - 830[0m
+[0mGET /api/auth/me [32m200[0m 3.541 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 1.883 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 2.914 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 1.833 ms - 108[0m
+[0mPOST /api/auth/change-password [32m200[0m 98.507 ms - 16[0m
+[0mPOST /api/auth/logout [32m200[0m 0.295 ms - 16[0m
+[0mGET /api/auth/me [33m401[0m 0.145 ms - 40[0m
+[0mGET /api/auth/me [33m401[0m 0.080 ms - 40[0m
+[0mGET /api/items?page=1&pageSize=12&sort=latest [32m200[0m 1.510 ms - 830[0m
+[0mGET /api/items?page=1&pageSize=12&sort=latest [32m200[0m 1.269 ms - 830[0m
+[0mGET /api/auth/me [33m401[0m 0.156 ms - 40[0m
+[0mGET /api/auth/me [33m401[0m 0.094 ms - 40[0m
+[0mPOST /api/auth/login [33m400[0m 0.399 ms - 64[0m
+[0mPOST /api/auth/login [32m200[0m 50.188 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 1.141 ms - 108[0m
+[0mGET /api/items?page=1&pageSize=12&sort=latest [32m200[0m 0.886 ms - 830[0m
+[0mGET /api/auth/me [32m200[0m 2.016 ms - 108[0m
+[0mGET /api/items?page=1&pageSize=12&sort=latest [32m200[0m 1.319 ms - 830[0m
+[0mGET /api/auth/me [32m200[0m 1.257 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 0.924 ms - 108[0m
+[0mGET /api/admin/items [36m304[0m 2.094 ms - -[0m
+[0mGET /api/admin/users [32m200[0m 0.749 ms - 409[0m
+[0mGET /api/admin/claims [36m304[0m 3.027 ms - -[0m
+[0mGET /api/admin/reports [36m304[0m 3.046 ms - -[0m
+[0mGET /api/auth/me [32m200[0m 1.124 ms - 108[0m
+[0mGET /api/items?page=1&pageSize=12&sort=latest [32m200[0m 1.033 ms - 830[0m
+[0mGET /api/auth/me [32m200[0m 1.103 ms - 108[0m
+[0mGET /api/items?page=1&pageSize=12&sort=latest [32m200[0m 1.136 ms - 830[0m
+[0mGET /api/auth/me [32m200[0m 2.469 ms - 108[0m
+[0mGET /api/items?page=1&pageSize=12&sort=latest [32m200[0m 1.890 ms - 830[0m
+[0mGET /api/auth/me [32m200[0m 2.198 ms - 108[0m
+[0mGET /api/items?page=1&pageSize=12&sort=latest [32m200[0m 2.078 ms - 830[0m
+[0mGET /api/auth/me [32m200[0m 1.186 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 0.826 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 1.480 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 1.210 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 1.237 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 1.796 ms - 108[0m
+[0mGET /api/admin/items [36m304[0m 1.255 ms - -[0m
+[0mGET /api/admin/reports [36m304[0m 1.155 ms - -[0m
+[0mGET /api/admin/claims [36m304[0m 1.735 ms - -[0m
+[0mGET /api/admin/users [36m304[0m 1.659 ms - -[0m
+[0mGET /api/auth/me [32m200[0m 2.200 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 0.946 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 1.702 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 1.271 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 41.401 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 39.601 ms - 108[0m
+[0mGET /api/admin/items [36m304[0m 4.948 ms - -[0m
+[0mGET /api/admin/claims [36m304[0m 5.213 ms - -[0m
+[0mGET /api/admin/users [36m304[0m 34.760 ms - -[0m
+[0mGET /api/admin/reports [36m304[0m 35.980 ms - -[0m
+[0mGET /api/admin/users?q=%E9%AB%98 [32m200[0m 11.959 ms - 149[0m
+[0mGET /api/admin/items [36m304[0m 2.282 ms - -[0m
+[0mGET /api/admin/claims [36m304[0m 5.576 ms - -[0m
+[0mGET /api/admin/users [36m304[0m 38.473 ms - -[0m
+[0mGET /api/admin/reports [36m304[0m 39.175 ms - -[0m
+[0mGET /api/auth/me [32m200[0m 1.839 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 1.410 ms - 108[0m
+[0mGET /api/admin/claims [36m304[0m 4.423 ms - -[0m
+[0mGET /api/admin/items [36m304[0m 5.249 ms - -[0m
+[0mGET /api/admin/users [36m304[0m 44.746 ms - -[0m
+[0mGET /api/admin/reports [36m304[0m 46.078 ms - -[0m
+[0mGET /api/auth/me [32m200[0m 2.356 ms - 108[0m
+[0mGET /api/auth/me [32m200[0m 1.486 ms - 108[0m
+[0mGET /api/admin/users [36m304[0m 1.432 ms - -[0m
+[0mGET /api/admin/claims [36m304[0m 4.145 ms - -[0m
+[0mGET /api/admin/items [36m304[0m 5.489 ms - -[0m
+[0mGET /api/admin/reports [36m304[0m 5.378 ms - -[0m
+09:22:35 [tsx] change in ./src\validators.ts Restarting...
+cnode:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::4000
+    at Server.setupListenHandle [as _listen2] (node:net:1948:16)
+    at listenInCluster (node:net:2005:12)
+    at Server.listen (node:net:2110:7)
+    at app.listen (D:\桌面\失物招领\zhenyuan-lostfound\backend\node_modules\express\lib\application.js:635:24)
+    at <anonymous> (D:\桌面\失物招领\zhenyuan-lostfound\backend\src\server.ts:694:5)
+    at ModuleJob.run (node:internal/modules/esm/module_job:430:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:661:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1984:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 4000
+}
+
+Node.js v24.14.0
+09:40:25 [tsx] change in ./src\server.ts Rerunning...
+cnode:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::4000
+    at Server.setupListenHandle [as _listen2] (node:net:1948:16)
+    at listenInCluster (node:net:2005:12)
+    at Server.listen (node:net:2110:7)
+    at app.listen (D:\桌面\失物招领\zhenyuan-lostfound\backend\node_modules\express\lib\application.js:635:24)
+    at <anonymous> (D:\桌面\失物招领\zhenyuan-lostfound\backend\src\server.ts:704:5)
+    at ModuleJob.run (node:internal/modules/esm/module_job:430:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:661:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1984:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 4000
+}
+
+Node.js v24.14.0
+09:43:07 [tsx] change in ./src\config.ts Rerunning...
+cnode:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::4000
+    at Server.setupListenHandle [as _listen2] (node:net:1948:16)
+    at listenInCluster (node:net:2005:12)
+    at Server.listen (node:net:2110:7)
+    at app.listen (D:\桌面\失物招领\zhenyuan-lostfound\backend\node_modules\express\lib\application.js:635:24)
+    at <anonymous> (D:\桌面\失物招领\zhenyuan-lostfound\backend\src\server.ts:704:5)
+    at ModuleJob.run (node:internal/modules/esm/module_job:430:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:661:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1984:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 4000
+}
+
+Node.js v24.14.0
+09:43:35 [tsx] change in ./src\server.ts Rerunning...
+cnode:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::4000
+    at Server.setupListenHandle [as _listen2] (node:net:1948:16)
+    at listenInCluster (node:net:2005:12)
+    at Server.listen (node:net:2110:7)
+    at app.listen (D:\桌面\失物招领\zhenyuan-lostfound\backend\node_modules\express\lib\application.js:635:24)
+    at <anonymous> (D:\桌面\失物招领\zhenyuan-lostfound\backend\src\server.ts:704:5)
+    at ModuleJob.run (node:internal/modules/esm/module_job:430:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:661:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1984:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 4000
+}
+
+Node.js v24.14.0
+09:51:42 [tsx] change in ./src\server.ts Rerunning...
+cnode:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::4000
+    at Server.setupListenHandle [as _listen2] (node:net:1948:16)
+    at listenInCluster (node:net:2005:12)
+    at Server.listen (node:net:2110:7)
+    at app.listen (D:\桌面\失物招领\zhenyuan-lostfound\backend\node_modules\express\lib\application.js:635:24)
+    at <anonymous> (D:\桌面\失物招领\zhenyuan-lostfound\backend\src\server.ts:705:5)
+    at ModuleJob.run (node:internal/modules/esm/module_job:430:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:661:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1984:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 4000
+}
+
+Node.js v24.14.0
