@@ -1003,7 +1003,7 @@ app.patch("/api/admin/items/:id/status", requireAdmin, async (req, res) => {
   return res.json({ success: true, data: item });
 });
 
-app.post("/api/admin/items/batch-delete", requireAdmin, async (req, res) => {
+app.post("/api/admin/items/batch-delete", requireAdmin, async (req: express.Request, res: express.Response) => {
   const parsed = adminItemBatchDeleteSchema.safeParse(req.body);
   if (!parsed.success) {
     return res.status(400).json({ success: false, error: "参数不合法" });
@@ -1031,7 +1031,7 @@ app.post("/api/admin/items/batch-delete", requireAdmin, async (req, res) => {
   return res.json({ success: true, data: { deleted: ids.length } });
 });
 
-app.get("/api/admin/users", requireAdmin, async (req, res) => {
+app.get("/api/admin/users", requireAdmin, async (req: express.Request, res: express.Response) => {
   const parsed = adminUserQuerySchema.safeParse(req.query);
   if (!parsed.success) {
     return res.status(400).json({ success: false, error: "参数不合法" });
@@ -1134,10 +1134,10 @@ app.use((err: unknown, _req: express.Request, res: express.Response, _next: expr
 
 app.listen(config.port, () => {
   console.log(`API running on http://localhost:${config.port}`);
-  const nets = os.networkInterfaces() as NodeJS.Dict<os.NetworkInterfaceInfo[]>;
+  const nets = os.networkInterfaces() ?? {};
   const ips: string[] = [];
   Object.values(nets).forEach((iface) => {
-    iface?.forEach((addr) => {
+    iface?.forEach((addr: os.NetworkInterfaceInfo) => {
       if (addr.family === "IPv4" && !addr.internal) {
         ips.push(addr.address);
       }

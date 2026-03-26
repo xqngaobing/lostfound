@@ -1,4 +1,4 @@
-﻿const envBase = process.env.NEXT_PUBLIC_API_BASE;
+const envBase = process.env.NEXT_PUBLIC_API_URL;
 export const API_BASE =
   envBase ??
   (typeof window !== "undefined"
