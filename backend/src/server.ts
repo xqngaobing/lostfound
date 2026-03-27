@@ -365,18 +365,42 @@ app.post("/api/uploads", requireAuth, upload.array("images", config.maxImageCoun
     return res.status(400).json({ success: false, error: "请上传图片" });
   }
 
-  const baseUrl = `${req.protocol}://${req.get("host")}`;
   const saved: string[] = [];
+  
   for (const file of files) {
-    const id = `${Date.now()}-${Math.random().toString(16).slice(2)}`;
-    const filename = `${id}.webp`;
-    const outputPath = path.join(uploadRoot, filename);
-    await sharp(file.buffer)
-      .rotate()
-      .resize({ width: 1600, withoutEnlargement: true })
-      .webp({ quality: 82 })
-      .toFile(outputPath);
-    saved.push(`${baseUrl}/uploads/${filename}`);
+    try {
+      // 处理图片：旋转、调整大小
+      const processedBuffer = await sharp(file.buffer)
+        .rotate()
+        .resize({ width: 1600, withoutEnlargement: true })
+        .png()
+        .toBuffer();
+      
+      // 上传到 tmpfiles.org（免费匿名图床）
+      const formData = new FormData();
+      formData.append("file", new Blob([processedBuffer], { type: "image/png" }), "image.png");
+      
+      const uploadResponse = await fetch("https://tmpfiles.org/api/v1/upload", {
+        method: "POST",
+        body: formData
+      });
+      
+      const uploadData = await uploadResponse.json() as { status?: string; data?: { url?: string } };
+      
+      if (uploadData.status === "success" && uploadData.data?.url) {
+        // tmpfiles.org 返回的 URL 需要转换格式
+        // https://tmpfiles.org/abc/def.png -> https://tmpfiles.org/dl/abc/def.png
+        let imageUrl = uploadData.data.url;
+        imageUrl = imageUrl.replace("tmpfiles.org/", "tmpfiles.org/dl/");
+        saved.push(imageUrl);
+      } else {
+        console.error("[Upload] Error:", uploadData);
+        return res.status(500).json({ success: false, error: "图片上传失败" });
+      }
+    } catch (err) {
+      console.error("[Upload] Error:", err);
+      return res.status(500).json({ success: false, error: "图片处理失败" });
+    }
   }
 
   return res.json({ success: true, data: saved });
