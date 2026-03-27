@@ -6,7 +6,7 @@
   images: string[];
   foundAt: string;
   locationText: string;
-  status: "OPEN" | "CLAIMED" | "REMOVED";
+  status: "OPEN" | "CLAIMING" | "CLAIMED" | "REMOVED";
   createdAt: string;
   viewCount: number;
 };
