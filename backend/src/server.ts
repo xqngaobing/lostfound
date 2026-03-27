@@ -244,8 +244,8 @@ app.post("/api/auth/register", async (req, res) => {
   const token = signToken(user.id);
   res.cookie(authCookieName, token, {
     httpOnly: true,
-    sameSite: "lax",
-    secure: config.cookieSecure,
+    sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
+    secure: true,
     domain: config.cookieDomain
   });
   return res.json({ success: true, data: { id: user.id, username: user.username, phone: user.phone } });
@@ -267,8 +267,8 @@ app.post("/api/auth/login", async (req, res) => {
   const token = signToken(user.id);
   res.cookie(authCookieName, token, {
     httpOnly: true,
-    sameSite: "lax",
-    secure: config.cookieSecure,
+    sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
+    secure: true,
     domain: config.cookieDomain
   });
   return res.json({ success: true, data: { id: user.id, username: user.username, phone: user.phone } });
