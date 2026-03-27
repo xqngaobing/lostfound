@@ -41,6 +41,10 @@ app.use(
     crossOriginResourcePolicy: { policy: "cross-origin" }
   })
 );
+app.use((req, res, next) => {
+  console.log("[CORS DEBUG] origin:", req.headers.origin, "allowed:", config.corsOrigins);
+  next();
+});
 app.use(
   cors({
     origin: config.corsOrigins.includes("*") ? true : config.corsOrigins,
