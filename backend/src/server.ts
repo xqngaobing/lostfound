@@ -57,6 +57,23 @@ if (!fs.existsSync(uploadRoot)) {
 }
 app.use("/uploads", express.static(uploadRoot));
 
+// 管理员清理图片接口
+app.delete("/api/admin/uploads/cleanup", requireAdmin, async (_req, res) => {
+  try {
+    const files = fs.readdirSync(uploadRoot);
+    let deletedCount = 0;
+    for (const file of files) {
+      const filePath = path.join(uploadRoot, file);
+      fs.unlinkSync(filePath);
+      deletedCount++;
+    }
+    return res.json({ success: true, data: { deletedCount } });
+  } catch (err) {
+    console.error("[Cleanup] Error:", err);
+    return res.status(500).json({ success: false, error: "清理失败" });
+  }
+});
+
 const storage = multer.memoryStorage();
 const upload = multer({
   storage,
