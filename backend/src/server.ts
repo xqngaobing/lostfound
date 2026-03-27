@@ -42,12 +42,26 @@ app.use(
   })
 );
 app.use((req, res, next) => {
-  console.log("[CORS DEBUG] origin:", req.headers.origin, "allowed:", config.corsOrigins);
+  const origin = req.headers.origin;
+  console.log("[CORS DEBUG] origin:", origin, "allowed:", config.corsOrigins);
   next();
 });
 app.use(
   cors({
-    origin: config.corsOrigins.includes("*") ? true : config.corsOrigins,
+    origin: (origin, callback) => {
+      // 如果没有 origin（服务器端请求或 Cloudflare 代理），允许通过
+      if (!origin) {
+        callback(null, true);
+        return;
+      }
+      // 如果 origin 在允许列表中，允许
+      if (config.corsOrigins.includes(origin)) {
+        callback(null, origin);
+        return;
+      }
+      // 否则拒绝
+      callback(new Error("Not allowed by CORS"));
+    },
     credentials: true
   })
 );
