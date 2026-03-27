@@ -365,67 +365,19 @@ app.post("/api/uploads", requireAuth, upload.array("images", config.maxImageCoun
     return res.status(400).json({ success: false, error: "请上传图片" });
   }
 
+  const baseUrl = config.publicBaseUrl;
   const saved: string[] = [];
-  const https = require("https");
   
   for (const file of files) {
-    try {
-      // 处理图片：旋转、调整大小
-      const processedBuffer = await sharp(file.buffer)
-        .rotate()
-        .resize({ width: 1600, withoutEnlargement: true })
-        .png()
-        .toBuffer();
-      
-      // Base64 编码
-      const base64Data = processedBuffer.toString("base64");
-      const boundary = "----FormBoundary" + Date.now();
-      
-      const body = `--${boundary}\r\n`
-        + `Content-Disposition: form-data; name="file"; filename="image.png"\r\n`
-        + `Content-Type: image/png\r\n\r\n`
-        + base64Data + `\r\n`
-        + `--${boundary}--\r\n`;
-      
-      const result = await new Promise((resolve, reject) => {
-        const options = {
-          hostname: "tmpfiles.org",
-          path: "/api/v1/upload",
-          method: "POST",
-          headers: {
-            "Content-Type": `multipart/form-data; boundary=${boundary}`,
-            "Content-Length": Buffer.byteLength(body)
-          }
-        };
-        
-        const req = https.request(options, (res: any) => {
-          let data = "";
-          res.on("data", (chunk: any) => data += chunk);
-          res.on("end", () => {
-            try {
-              resolve(JSON.parse(data));
-            } catch {
-              resolve(null);
-            }
-          });
-        });
-        req.on("error", reject);
-        req.write(body);
-        req.end();
-      }) as { status?: string; data?: { url?: string } };
-      
-      if (result?.status === "success" && result?.data?.url) {
-        let imageUrl = result.data.url;
-        imageUrl = imageUrl.replace("tmpfiles.org/", "tmpfiles.org/dl/");
-        saved.push(imageUrl);
-      } else {
-        console.error("[Upload] Error:", result);
-        return res.status(500).json({ success: false, error: "图片上传失败" });
-      }
-    } catch (err) {
-      console.error("[Upload] Error:", err);
-      return res.status(500).json({ success: false, error: "图片处理失败" });
-    }
+    const id = `${Date.now()}-${Math.random().toString(16).slice(2)}`;
+    const filename = `${id}.webp`;
+    const outputPath = path.join(uploadRoot, filename);
+    await sharp(file.buffer)
+      .rotate()
+      .resize({ width: 800, withoutEnlargement: true })
+      .webp({ quality: 75 })
+      .toFile(outputPath);
+    saved.push(`${baseUrl}/uploads/${filename}`);
   }
 
   return res.json({ success: true, data: saved });
