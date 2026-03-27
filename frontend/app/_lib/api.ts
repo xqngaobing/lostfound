@@ -2,13 +2,17 @@ const envBase = process.env.NEXT_PUBLIC_API_URL;
 export const API_BASE =
   envBase ??
   (typeof window !== "undefined"
-    ? `http://${window.location.hostname}:4000`
+    ? `https://${window.location.hostname}`
     : "http://localhost:4000");
 
 export const normalizeImageUrl = (url: string): string => {
   if (typeof window === "undefined") return url;
-  if (url.startsWith("http://localhost:4000")) {
-    return url.replace("http://localhost:4000", `http://${window.location.hostname}:4000`);
+  const host = window.location.hostname;
+  if (url.includes("localhost:4000")) {
+    return url.replace(/https?:\/\/[^/]*localhost:4000/, `https://${host}`);
+  }
+  if (url.includes(host) && url.includes(":4000")) {
+    return url.replace(/:4000/, "");
   }
   return url;
 };
