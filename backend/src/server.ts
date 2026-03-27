@@ -366,6 +366,7 @@ app.post("/api/uploads", requireAuth, upload.array("images", config.maxImageCoun
   }
 
   const saved: string[] = [];
+  const https = require("https");
   
   for (const file of files) {
     try {
@@ -376,25 +377,49 @@ app.post("/api/uploads", requireAuth, upload.array("images", config.maxImageCoun
         .png()
         .toBuffer();
       
-      // 上传到 tmpfiles.org（免费匿名图床）
-      const formData = new FormData();
-      formData.append("file", new Blob([processedBuffer], { type: "image/png" }), "image.png");
+      // Base64 编码
+      const base64Data = processedBuffer.toString("base64");
+      const boundary = "----FormBoundary" + Date.now();
       
-      const uploadResponse = await fetch("https://tmpfiles.org/api/v1/upload", {
-        method: "POST",
-        body: formData
-      });
+      const body = `--${boundary}\r\n`
+        + `Content-Disposition: form-data; name="file"; filename="image.png"\r\n`
+        + `Content-Type: image/png\r\n\r\n`
+        + base64Data + `\r\n`
+        + `--${boundary}--\r\n`;
       
-      const uploadData = await uploadResponse.json() as { status?: string; data?: { url?: string } };
+      const result = await new Promise((resolve, reject) => {
+        const options = {
+          hostname: "tmpfiles.org",
+          path: "/api/v1/upload",
+          method: "POST",
+          headers: {
+            "Content-Type": `multipart/form-data; boundary=${boundary}`,
+            "Content-Length": Buffer.byteLength(body)
+          }
+        };
+        
+        const req = https.request(options, (res: any) => {
+          let data = "";
+          res.on("data", (chunk: any) => data += chunk);
+          res.on("end", () => {
+            try {
+              resolve(JSON.parse(data));
+            } catch {
+              resolve(null);
+            }
+          });
+        });
+        req.on("error", reject);
+        req.write(body);
+        req.end();
+      }) as { status?: string; data?: { url?: string } };
       
-      if (uploadData.status === "success" && uploadData.data?.url) {
-        // tmpfiles.org 返回的 URL 需要转换格式
-        // https://tmpfiles.org/abc/def.png -> https://tmpfiles.org/dl/abc/def.png
-        let imageUrl = uploadData.data.url;
+      if (result?.status === "success" && result?.data?.url) {
+        let imageUrl = result.data.url;
         imageUrl = imageUrl.replace("tmpfiles.org/", "tmpfiles.org/dl/");
         saved.push(imageUrl);
       } else {
-        console.error("[Upload] Error:", uploadData);
+        console.error("[Upload] Error:", result);
         return res.status(500).json({ success: false, error: "图片上传失败" });
       }
     } catch (err) {
